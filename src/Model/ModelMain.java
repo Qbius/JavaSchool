@@ -24,11 +24,6 @@ public class ModelMain
         return singleton;
     }
 
-    public List<Program> getResources()
-    {
-        return resources;
-    }
-
     public DefaultListModel getResourceNames()
     {
         return resourceNames;
