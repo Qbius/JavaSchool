@@ -100,9 +100,10 @@ public class ModelMain
     public void saveFile(JFrame root)
     {
         if (fileSet) {
-            try (FileWriter fw = new FileWriter(this.currentFile)) {
+            try (BufferedWriter fw = new BufferedWriter(new FileWriter(currentFile))) {
                 for (Program p : resources) {
                     fw.write(p.toString());
+                    fw.newLine();
                 }
                 this.noChanges = true;
             } catch (IOException exc) {
