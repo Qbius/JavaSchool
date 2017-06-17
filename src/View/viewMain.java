@@ -162,11 +162,8 @@ public class ViewMain {
             listMenu.add(editEntryCommand);
 
             JMenuItem deleteEntryCommand = new JMenuItem("Delete entry");
-            deleteEntryCommand.addActionListener(new ActionListener()
-            {
-                @Override
-                public void actionPerformed(ActionEvent event)
-                {
+            deleteEntryCommand.addActionListener(
+                (ActionEvent event) -> {
                     int index = list.getSelectedIndex();
                     if (index >= 0) {
                         ModelMain.instance().deleteResource(index);
@@ -175,7 +172,7 @@ public class ViewMain {
                         JOptionPane.showMessageDialog(frame, "No entry selected!");
                     }
                 }
-            });
+            );
             listMenu.add(deleteEntryCommand);
         }
         menuBar.add(listMenu);
