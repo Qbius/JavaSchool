@@ -1,10 +1,11 @@
-import View.viewMain;
+import Model.ModelMain;
+import View.ViewMain;
 
 public class start {
 
     public static void main(String[] args) {
 
-        viewMain v = new viewMain();
+        new ViewMain();
 
     }
 
